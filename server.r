@@ -28,7 +28,7 @@ shinyServer(function(input, output) {
     gvisGeoChart(my_dat, locationvar='longlat', colorvar='obs_rate',
                  hovervar = "zip_code",
                  options=list(region='US-NY', resolution = "metros",
-                              width = 850, height=538, 
+                              width = 850, height=670, 
                               displayMode='markers', 
                               colorAxis = "{values:[0, 100, 200, 500, 800, 1000, 1200],
                               colors:[\'DarkBlue', \'Teal', \'DarkGreen', \'Gold', \'OrangeRed', \'DeepPink', \'Red']}")
