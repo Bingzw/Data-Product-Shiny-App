@@ -19,7 +19,7 @@ shinyUI(pageWithSidebar(
   ),
     
   mainPanel(
-    h3(textOutput("year")), 
+     
     htmlOutput("gvis"),
     htmlOutput("ExpRateDisease")
   )

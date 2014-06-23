@@ -1,0 +1,66 @@
+---
+title       : Hospital Inpatient PQI for Adults by zipcode in NY
+subtitle    : for year 2009 - 2012
+author      : Bing Wang
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap, quiz, shiny, interactive]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+
+--- 
+
+## Goal? What for?
+
+Present the observe/expected rate of 17 kinds of disease recored from 2009 to 2012 in New York state.
+
+
+---
+
+## What you can do ?
+
+   select an input year from 2009 - 2012
+  
+   select a certain kind of disease (17 kinds in total)
+  
+   select some distrct in NY state by zipcode  
+  
+
+---
+
+## What I can offer?
+
+1. Given a year in 2009-2012 and a certain kind of disease, show the geographically distribution of observe rate of the disease in NY state. 
+
+2. Given a year in 2009-2012 and some district in NY state(zipcode), show the relative observe/expected rate among these 17 kinds of disease.
+
+3. Given a certain kind of disease and some district in NY state(zipcode), show the trend of observe/expected rate of the disease from 2009-2012. 
+
+
+---
+
+## An example of "Heart Failure" at 10001
+```{r}
+obs_rate <- c(501.16, 306.13, 221.54, 310.86)
+exp_rate <- c(321.42, 295.68, 283.69, 316.91)
+```
+```{r,echo = FALSE,eval = TRUE}
+max_y <- max(obs_rate, exp_rate)
+min_y <- min(obs_rate, exp_rate)
+yrange <- c(min_y, max_y)
+```
+```{r simple-plot, fig.height = 6, fig.align = 'center', message = F,echo = FALSE,eval = TRUE}
+plot(c(2009, 2012),  yrange, xaxt = "n",   xlab = "Year", ylab = "Rate per 100,000 people", type = "n")
+axis(1, at = 2009:2012, label = c("2009", "2010", "2011", "2012"))
+lines(2009:2012, obs_rate, col = "red")
+lines(2009:2012, exp_rate, col = "blue") 
+legend("topright", c("observed","expected"), fill = c("red","blue"))
+title(paste("Heart Failure", "\n", "at district", "10001"), ps = 0.5)
+```
+---
+
+
+
+
+

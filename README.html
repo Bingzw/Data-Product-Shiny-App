@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Hospital Inpatient Prevention Quality Indicators for Adults by zipcode from 2009-2012 in New York State</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Hospital Inpatient Prevention Quality Indicators for Adults by zipcode from 2009-2012 in New York State</h1>
+
+<h2>Introduction</h2>
+
+<p>This is an application of presenting the observe/expected rate of 17 kinds of disease recored from 2009 to 2012 in New York state. We acquired the raw data from <a href="https://health.data.ny.gov/api/views/5q8c-d6xq/rows.csv?accessType=DOWNLOAD">https://health.data.ny.gov/api/views/5q8c-d6xq/rows.csv?accessType=DOWNLOAD</a>. In this data set, we can find out the observe/expected rate of a certain kind of disease for a certain year (among 2009-2012) and a certain district (some zipcode in NY). </p>
+
+<p>The goal of this app is to fulfill the following functions:</p>
+
+<ol>
+<li><p>Fix a year in 2009-2012 and a certain kind of disease, show the geographically distribution of observe rate of the disease in NY state. </p></li>
+<li><p>Fix a year in 2009-2012 and some district in NY state(zipcode), show the relative observe/expected rate among these 17 kinds of disease.</p></li>
+<li><p>Fix a certain kind of disease and some district in NY state(zipcode), show the trend of observe/expected rate of the disease from 2009-2012. </p></li>
+</ol>
+
+<hr/>
+
+<h2>How to use this app?</h2>
+
+<p>This app show you three parts. The left side panel, main panel and the part down below them.</p>
+
+<ul>
+<li><p>In the left side panel, you can: </p>
+
+<ul>
+<li>select an input year from 2009 - 2012</li>
+<li>select a certain kind of disease (17 kinds in total)</li>
+<li>select some distrct in NY state by zipcode</li>
+</ul></li>
+<li><p>According to your selection above, we can show you:</p>
+
+<ul>
+<li>function 1 in the main panel</li>
+<li>function 2 in the area down below the main panel and left side panel</li>
+<li>function 3 in the left side panel</li>
+</ul></li>
+</ul>
+
+<hr/>
+
+<h2>Note: </h2>
+
+<ul>
+<li><p>In the data cleaning setp, we exclude those statewide observations</p></li>
+<li><p>The unit of observe/expected rate is per 100,000 people </p></li>
+</ul>
+
+<hr/>
+
+</body>
+
+</html>
+
